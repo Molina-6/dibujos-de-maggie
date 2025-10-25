@@ -1,4 +1,3 @@
-/* Estilo general */
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(180deg, #ffe6f2, #fff);
@@ -8,7 +7,6 @@ body {
   color: #444;
 }
 
-/* Encabezado */
 header {
   background: linear-gradient(90deg, #ffb6d9, #ff99cc);
   color: white;
@@ -17,11 +15,11 @@ header {
   box-shadow: 0 0 10px rgba(255, 182, 217, 0.7);
 }
 
-/* Decoración de unicornios y arcoiris */
+/* Animaciones decorativas */
 .decoracion img {
   position: absolute;
   width: 120px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .unicornio {
@@ -47,6 +45,37 @@ header {
   50% { filter: brightness(1.5); }
 }
 
+/* Subida */
+.upload {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #fff0f6;
+  border: 2px dashed #ffb6d9;
+  border-radius: 15px;
+}
+
+.upload input {
+  padding: 0.5rem;
+  border: 1px solid #ffb6d9;
+  border-radius: 10px;
+}
+
+.upload button {
+  margin-left: 10px;
+  background: #ff99cc;
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.upload button:hover {
+  background: #ff66b3;
+}
+
 /* Galerías */
 .gallery {
   margin-top: 3rem;
@@ -61,7 +90,6 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Tarjetas */
 .images {
   display: flex;
   flex-wrap: wrap;
@@ -102,20 +130,11 @@ header {
   background: #ff66b3;
 }
 
-/* Diferentes fondos de color para secciones */
-.colorear {
-  background: #fff0f6;
-}
-
-.fondos {
-  background: #ffe6f2;
-}
-
-/* Pie */
 footer {
   background: #ffb6d9;
   color: white;
   padding: 1rem;
   font-size: 0.9rem;
 }
+
 
