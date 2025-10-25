@@ -12,47 +12,45 @@
     <p>Dibujos mágicos para colorear y fondos encantados 💕</p>
   </header>
 
+  <!-- Decoración -->
   <div class="decoracion">
     <img src="img/unicornio.gif" alt="Unicornio" class="unicornio">
     <img src="img/arcoiris.png" alt="Arcoíris" class="arcoiris">
   </div>
 
+  <!-- Subida de archivos -->
+  <section class="upload">
+    <h2>📤 Subir un nuevo dibujo o fondo</h2>
+    <input type="file" id="fileInput" accept="image/*">
+    <button id="uploadBtn">Subir imagen</button>
+  </section>
+
   <main>
-    <!-- SECCIÓN 1: DIBUJOS PARA COLOREAR -->
+    <!-- DIBUJOS PARA COLOREAR -->
     <section class="gallery colorear">
       <h2>🎨 Dibujos para Colorear</h2>
-      <div class="images">
-        <div class="card">
-          <img src="img/dibujo1.jpg" alt="Dibujo 1">
-          <a href="img/dibujo1.jpg" download>Descargar</a>
-        </div>
-        <div class="card">
-          <img src="img/dibujo2.jpg" alt="Dibujo 2">
-          <a href="img/dibujo2.jpg" download>Descargar</a>
-        </div>
-      </div>
+      <div class="images" id="colorearGallery"></div>
     </section>
 
-    <!-- SECCIÓN 2: FONDOS DE PANTALLA -->
+    <!-- FONDOS DE PANTALLA -->
     <section class="gallery fondos">
       <h2>🌸 Fondos de Pantalla</h2>
-      <div class="images">
-        <div class="card">
-          <img src="img/fondo1.jpg" alt="Fondo 1">
-          <a href="img/fondo1.jpg" download>Descargar</a>
-        </div>
-        <div class="card">
-          <img src="img/fondo2.jpg" alt="Fondo 2">
-          <a href="img/fondo2.jpg" download>Descargar</a>
-        </div>
-      </div>
+      <div class="images" id="fondosGallery"></div>
     </section>
   </main>
 
   <footer>
     <p>Hecho con 💗 por papá para Maggie 💗</p>
   </footer>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-storage.js"></script>
+
+  <!-- Tu script -->
+  <script src="app.js"></script>
 </body>
 </html>
+
 
 
