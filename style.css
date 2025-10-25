@@ -1,51 +1,82 @@
+/* Estilo general */
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(180deg, #ffe6f2, #fff);
-  color: #444;
   margin: 0;
-  padding: 0;
   text-align: center;
   overflow-x: hidden;
+  color: #444;
 }
 
+/* Encabezado */
 header {
-  background-color: #ffb6d9;
+  background: linear-gradient(90deg, #ffb6d9, #ff99cc);
   color: white;
   padding: 2rem 1rem;
-  border-bottom: 5px solid #ff8fcf;
-  animation: float 3s ease-in-out infinite;
+  border-bottom: 5px solid #ff66b3;
+  box-shadow: 0 0 10px rgba(255, 182, 217, 0.7);
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
+/* Decoración de unicornios y arcoiris */
+.decoracion img {
+  position: absolute;
+  width: 120px;
+  opacity: 0.8;
 }
 
+.unicornio {
+  top: 20px;
+  left: 5%;
+  animation: volar 10s linear infinite;
+}
+
+.arcoiris {
+  bottom: 10px;
+  right: 5%;
+  animation: brillar 3s ease-in-out infinite;
+}
+
+@keyframes volar {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(40vw) rotate(10deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes brillar {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.5); }
+}
+
+/* Galerías */
 .gallery {
+  margin-top: 3rem;
   padding: 2rem;
 }
 
 .gallery h2 {
   color: #ff66b3;
+  border-bottom: 3px solid #ffb6d9;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
 }
 
+/* Tarjetas */
 .images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 1rem;
 }
 
 .card {
   background: white;
   border: 2px solid #ffb6d9;
   border-radius: 15px;
-  box-shadow: 0 5px 10px rgba(255, 182, 217, 0.5);
-  transition: transform 0.3s;
   width: 200px;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 182, 217, 0.5);
+  transition: transform 0.3s;
 }
 
 .card:hover {
@@ -71,26 +102,20 @@ header {
   background: #ff66b3;
 }
 
-.upload {
+/* Diferentes fondos de color para secciones */
+.colorear {
+  background: #fff0f6;
+}
+
+.fondos {
   background: #ffe6f2;
-  padding: 2rem;
-  border-top: 3px dashed #ffb6d9;
 }
 
-.upload button {
-  background: #ffb6d9;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
+/* Pie */
 footer {
   background: #ffb6d9;
   color: white;
   padding: 1rem;
   font-size: 0.9rem;
 }
+
