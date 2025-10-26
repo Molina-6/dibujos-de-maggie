@@ -1,3 +1,5 @@
+<script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js"></script>
+
 rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
