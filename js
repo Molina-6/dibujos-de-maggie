@@ -1,18 +1,12 @@
-const firebaseConfig = {// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Cualquiera puede ver y descargar (read)
+      allow read: if true;
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBHc4YWi61hRNflAu3qH4FiKT3SHSmkH4Q",
-  authDomain: "dibujosmaggie.firebaseapp.com",
-  projectId: "dibujosmaggie",
-  storageBucket: "dibujosmaggie.firebasestorage.app",
-  messagingSenderId: "584974541113",
-  appId: "1:584974541113:web:4d479765f00db4a03008e8"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig); 
-};
+      // Solo usuarios autenticados (logueados) pueden subir (write)
+      allow write: if request.auth != null;
+    }
+  }
+}
