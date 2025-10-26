@@ -10,3 +10,14 @@ service firebase.storage {
     }
   }
 }
+const auth = firebase.auth();
+
+const loginBtn = document.getElementById("loginBtn");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+
+loginBtn.addEventListener("click", () => {
+  auth.signInWithEmailAndPassword(email.value, password.value)
+    .then(() => alert("✅ Sesión iniciada"))
+    .catch((error) => alert("Error: " + error.message));
+});
